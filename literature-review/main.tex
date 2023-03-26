@@ -1,51 +1,17 @@
-\documentclass[12pt]{article}
-\usepackage[a4paper]{geometry}
-\usepackage{parskip} % deviate from template but looks nicer visually
-
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-
-\usepackage{times}
-\usepackage{microtype}
-\usepackage{inconsolata}
-
-% Print a dot instead of colon in table or figure captions
-\usepackage[labelsep=period]{caption}
-
-\usepackage{array}
-\usepackage{tabu}
-\usepackage{xspace}
-
-\usepackage{graphicx}
-\graphicspath{{figures/}}
-
-% Figure sizing
-\usepackage{pdflscape}
-\usepackage{calc} % Required for width calculations
-
-\usepackage[hidelinks]{hyperref}
-\usepackage[all]{hypcap}
-
-\usepackage{color}
-\usepackage{xcolor} 
-
-\usepackage[
-    backend=biber,
-    citestyle=ieee,
-    bibstyle=numeric,
-    urldate=iso,
-    seconds=true
-]{biblatex}
+%! Author = partsjoo
+%! Date = 26.03.2023
+\input{settings.tex}
 \addbibresource{ref.bib}
-
-% Define the author commands
-\newcommand{\authorone}{Joosep Parts}
-
 \begin{document}
 
 %===BEGIN TITLE PAGE
 \input{title.tex}
 %===END TITLE PAGE
+
+% Remember to remove this from the final thesis version
+\newpage
+\listoftodos[Unsolved issues]
+% END OF TODO PAGE 
 
 \newpage
 \tableofcontents
