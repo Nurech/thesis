@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper]{geometry}
+\usepackage{parskip} % deviate from template but looks nicer visually
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{times}
+\usepackage{microtype}
+\usepackage{inconsolata}
+
+% Print a dot instead of colon in table or figure captions
+\usepackage[labelsep=period]{caption}
+
+\usepackage{array}
+\usepackage{tabu}
+\usepackage{xspace}
+
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+
+% Figure sizing
+\usepackage{pdflscape}
+\usepackage{calc} % Required for width calculations
+
+\usepackage[hidelinks]{hyperref}
+\usepackage[all]{hypcap}
+
+\usepackage{color}
+\usepackage{xcolor} 
+
+\usepackage[
+    backend=biber,
+    citestyle=ieee,
+    bibstyle=numeric,
+    urldate=iso,
+    seconds=true
+]{biblatex}
+\addbibresource{ref.bib}
+
+% Define the author commands
+\newcommand{\authorone}{Joosep Parts}
+
+\begin{document}
+
+%===BEGIN TITLE PAGE
+\input{title.tex}
+%===END TITLE PAGE
+
+\newpage
+\tableofcontents
+\newpage
+
+% Use inputs instead of includes to avoid
+% page-separated sections
+
+\input{q1.tex}
+\input{q2.tex}
+\input{q3.tex}
+
+\newpage
+\printbibliography
+\addcontentsline{toc}{section}{\refname}
+
+\end{document}
