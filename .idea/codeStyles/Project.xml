@@ -2,5 +2,13 @@
   <code_scheme name="Project" version="173">
     <option name="RIGHT_MARGIN" value="80" />
     <option name="SOFT_MARGINS" value="80" />
+    <codeStyleSettings language="Bibtex">
+      <option name="WRAP_LONG_LINES" value="true" />
+      <option name="WRAP_ON_TYPING" value="1" />
+    </codeStyleSettings>
+    <codeStyleSettings language="Latex">
+      <option name="WRAP_LONG_LINES" value="true" />
+      <option name="WRAP_ON_TYPING" value="1" />
+    </codeStyleSettings>
   </code_scheme>
 </component>

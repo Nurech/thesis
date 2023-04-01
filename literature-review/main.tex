@@ -1,30 +1,34 @@
 %! Author = partsjoo
-%! Date = 26.03.2023
-\input{settings.tex}
+%! Date = 01.04.2023
+
+\input{settings}
+\input{abbreviations}
+
 \begin{document}
 
-%===BEGIN TITLE PAGE
-\input{title.tex}
-%===END TITLE PAGE
+    \input{title}
 
-% Remember to remove this from the final thesis version
-\newpage
-\listoftodos[Unsolved issues]
-% END OF TODO PAGE 
+    \input{abstract}
 
-\newpage
-\tableofcontents
-\newpage
+    \newpage
+    \printacronyms
 
-% Use inputs instead of includes to avoid
-% page-separated sections
+    \newpage
+    \tableofcontents
 
-\input{q1.tex}
-\input{q2.tex}
-\input{q3.tex}
 
-\newpage
-\printbibliography
-\addcontentsline{toc}{section}{\refname}
+    \input{introduction}
+    \input{background}
+    \input{contribution}
+    \input{validation}
+    \input{discussion}
+    \input{conclusion}
+
+    \newpage
+    \printbibliography
+    \addcontentsline{toc}{section}{\refname}
+
+    \input{appendix}
+    \input{license}
 
 \end{document}
