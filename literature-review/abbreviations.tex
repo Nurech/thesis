@@ -2,6 +2,11 @@
 %! Date = 02.04.2023
 
 \usepackage{acro}
+\newenvironment{acronyms}
+  {\labeling[~\dots]{longestword}}
+  {\endlabeling}
+
+\acsetup{list-type=acronyms,only-used=false}
 
 % class `abbrev': abbreviations:
 \DeclareAcronym{ny}{
@@ -39,12 +44,3 @@
   sort  = A ,
   class = nomencl
 }
-
-\setlist{itemsep=10ex}\printacronyms[name=Acronyms]
-
-\newenvironment{acronyms}
-{\labeling[--]{thelongestword}}
-{\endlabeling}
-\acsetup{list-type=acronyms}
-
-
