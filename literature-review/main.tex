@@ -1,6 +1,7 @@
-\usepackage{biblatex}%! Author = partsjoo
 %! Date = 02.04.2023
+%! Author = partsjoo
 
+\usepackage{biblatex}
 \input{settings}
 \input{config}
 \input{abbreviations}
@@ -12,7 +13,7 @@
     \input{abstract}
 
     \newpage
-    \printacronyms
+    \printacronyms[include-classes=nomencl,name={\thesisAbbreviations}]
 
     \newpage
     \tableofcontents
