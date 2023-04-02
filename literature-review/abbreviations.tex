@@ -1,50 +1,46 @@
 %! Author = partsjoo
 %! Date = 02.04.2023
 
-\usepackage{acro}
 
-% class `abbrev': abbreviations:
+
+\newenvironment{acronyms}
+{\labeling[--]{thelongestword}}
+{\endlabeling}
+
 \DeclareAcronym{ny}{
   short = NY ,
   long  = New York ,
-  class = abbrev
+  tag   = abbrev
 }
 \DeclareAcronym{la}{
   short = LA ,
   long  = Los Angeles ,
-  class = abbrev
+  tag   = abbrev
 }
 \DeclareAcronym{un}{
   short = UN ,
   long  = United Nations ,
-  class = abbrev
+  tag   = abbrev
 }
 
-% class `nomencl': nomenclature
+% tag   `nomencl': nomenclature
 \DeclareAcronym{angelsperarea}{
   short = \ensuremath{a} ,
   long  = The number of angels per unit area ,
   sort  = a ,
-  class = nomencl
+  tag   = nomencl
 }
 \DeclareAcronym{numofangels}{
   short = \ensuremath{N} ,
   long  = The number of angels per needle point ,
   sort  = N ,
-  class = nomencl
+  tag   = nomencl
 }
 \DeclareAcronym{areaofneedle}{
   short = \ensuremath{A} ,
   long  = The area of the needle point ,
   sort  = A ,
-  class = nomencl
+  tag   = nomencl
 }
-
-\setlist{itemsep=10ex}\printacronyms[name=Acronyms]
-
-\newenvironment{acronyms}
-{\labeling[--]{thelongestword}}
-{\endlabeling}
-\acsetup{list-type=acronyms}
 
 
