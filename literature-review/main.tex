@@ -1,14 +1,17 @@
 %! Author = partsjoo
 %! Date = 02.04.2023
-%! Date = 02.04.2023
-%! Author = partsjoo
 
-
-
+\documentclass[12pt]{article} % here to clear compiler errors
 
 \input{settings}
 \input{config}
 \input{abbreviations}
+
+\usepackage[backend=biber,citestyle=ieee,bibstyle=numeric,urldate=iso,seconds=true]{biblatex} % here to clear compiler errors
+\addbibresource{ref.bib}
+
+
+
 
 \begin{document}
 
@@ -17,7 +20,7 @@
     \input{abstract}
 
     \newpage
-    \printacronyms[name={\thesisAbbreviations}]
+    \printacronyms
 
     \newpage
     \tableofcontents
