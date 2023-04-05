@@ -1,46 +1,49 @@
 %! Author = partsjoo
-%! Date = 02.04.2023
+%! Date = 05.04.2023
 
 \documentclass[12pt]{article} % here to clear compiler errors
 
 \input{settings}
 \input{config}
-\input{abbreviations}
+\input{acronyms}
 
-\usepackage[backend=biber,citestyle=ieee,bibstyle=numeric,urldate=iso,seconds=true]{biblatex} % here to clear compiler errors
+\usepackage[backend=biber,
+  citestyle=ieee,
+  bibstyle=numeric,
+  urldate=iso,
+  seconds=true]{biblatex} % here to clear compiler errors
 \addbibresource{ref.bib}
-
-
-
 
 \begin{document}
 
-    \input{title}
+  \input{title}
 
-    \input{abstract}
+  \input{abstract}
 
-    \newpage
-    \printacronyms
+  \newpage
+  \clearpage
+  \phantomsection
+  \printacronyms
 
-    \newpage
-    \tableofcontents
+  \newpage
+  \tableofcontents
 
 
-    \input{introduction}
-    \input{related_work}
-    \input{background}
-    \input{data_analysis}
-    \input{case_study}
-    \input{expert_interviews}
-    \input{contribution}
-    \input{validation}
-    \input{conclusion}
+  \input{introduction}
+%    \input{related_work}
+  \input{background}
+  \input{data_analysis}
+  \input{case_study}
+  \input{expert_interviews}
+  \input{contribution}
+  \input{validation}
+  \input{conclusion}
 
-    \newpage
-    \printbibliography
+  \newpage
+  \printbibliography
 
-    \addcontentsline{toc}{section}{\refname}
+  \addcontentsline{toc}{section}{\refname}
 
-    \input{appendix}
+  \input{appendix}
 
 \end{document}
