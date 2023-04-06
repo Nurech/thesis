@@ -226,8 +226,11 @@
 \definecolor{mauve}{rgb}{0.58,0,0.82}
 
 % Table stuff
+\usepackage{multirow}
 \usepackage{makecell}
 \usepackage{tabularx,array,booktabs}
 \newcolumntype{Y}{>{\centering\arraybackslash}X} % for centering tables in tabularx
 \def\tabularxcolumn#1{m{#1}}
 \newcommand{\heading}[1]{\bfseries\begin{tabular}{@{}c@{}} #1 \end{tabular}}
+
+\newcolumntype{s}{>{\centering\hsize=.5\hsize}X}
