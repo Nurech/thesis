@@ -3,7 +3,7 @@ import datetime
 
 today = datetime.datetime.today().strftime('%d.%m.%Y')
 
-project_dir = './'
+project_dir = '../'
 
 for root, dirs, files in os.walk(project_dir):
     for file in files:
