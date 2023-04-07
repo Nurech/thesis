@@ -41,13 +41,14 @@
 \usepackage{xifthen}
 
 \newcommand{\tablestyle}[1]{
-  \ifthenelse{\equal{#1}{box}}{
+  \if{\equal{#1}{box}}{
     \newcommand{\styleBeginTabular}{\begin{tabularx}{\textwidth}{|c|c|c|c|Y|}}
     \newcommand{\styleTopRule}{\hline}
     \newcommand{\styleMidRule}{\hline}
     \newcommand{\styleBottomRule}{\hline}
     \newcommand{\styleRowEnd}{\\\hline}
-  }{
+  }
+  \if{\equal{#1}{nobox}}{
     \newcommand{\styleBeginTabular}{\begin{tabularx}{\textwidth}{ccccY}}
     \newcommand{\styleTopRule}{\toprule}
     \newcommand{\styleMidRule}{\midrule}
@@ -73,7 +74,47 @@
   1 & LISTA & 513 million records & 2005 & Automation, Classification, Electronic resources and ERM systems \styleRowEnd
   1 & Google Scholar & 389 million records & 2004 & Various topics \styleRowEnd
   \styleBottomRule
+  \label{tab:table1}
 \end{tabularx}
 \caption{}
 \label{tab:}
+\end{table}
+
+
+\begin{table}[h!]
+\label{tab:filters}
+\small
+\centering
+\begin{talltblr}[
+caption = {Used search filters},
+label = {beta},
+note{*} = {In addition, also includes terms from primary studies},
+]{|l|c|c|c|c|}
+\toprule
+Primary studies & & \SetCell[c=2]{c} Secondary studies\rlap{\TblrNote{*}} & \\
+\midrule
+&  Coefficient & 95\% CI     &  Coefficient & 95\% CI \\
+\midrule
+0.190 & (0.113, 0.268) & 0.171 & (0.100, 0.241)\\
+0.117 &  (0.043, 0.191)  & 0.117 & (0.050, 0.183)\\
+0.210 &  (0.139, 0.281)  & 0.190 & (0.127, 0.253)\\
+0.204 & (0.135, 0.273)   & 0.111 & ( 0.049, 0.173)\\
+0.157 & (0.07,8 0.236) & 0.208 & (0.136, 0.280) \\
+0.115 & (0.041, 0.189) & 0.100 & (0.034, 0.166) \\
+\bottomrule
+\end{talltblr}
+\end{table}
+
+
+\begin{table}[h]
+\label{tab:filters1}
+\centering
+\small
+\caption{Used search filters}
+\begin{tabularx}{\textwidth}{|c|Y|Y|Y|c|}
+\hline
+\textbf{}          & \textbf{Date}     & \textbf{Type}                                 & \textbf{Discipline}           & \textbf{Langugage} \\\hline
+Primary studies    & $[2019\dots2023]$ & Reports, Journals, Experiments, Datasets      & Computer Science, Engineering     & English            \\\hline
+Secondary studies* & $[2014\dots2023]$ & Articles, Conference Proceedings, Whitepapers & Social Sciences, Psychology & Estonian \\\hline
+\end{tabularx}
 \end{table}
