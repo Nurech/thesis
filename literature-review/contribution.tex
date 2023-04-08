@@ -103,7 +103,9 @@ terms used and the number
 of results
 obtained from each
 resource was recorded for later use to check for updates on the subject. Most filtering refinements were done in \ac{ui}. To identify relevant research several databases were queried with the same search terms. Database selection was based
-on the main category of hosted works (technology), the number of publications published and the age of the portal.
+on the main category of hosted works (technology), the number of publications published and the age of the portal. In the execution phase
+main databases were (SpringerLink, IEEExplore, Scopus, ScienceDirect, Web of Science) due to their large number of publications and
+relvance on the topic. Initial queries yeilded small number of results, thus the search was extended to secondary sources (LISTA, Frontiers, Google Scholar).
 
 \begin{table}[htb]
   \centering
@@ -117,41 +119,72 @@ on the main category of hosted works (technology), the number of publications pu
     3                & Scopus             & 34,346 journals       & 2004          & Life sciences, Social Sciences, Physical Sciences                \\\hline
     4                & ScienceDirect      & 15,000,000 articles   & 1997          & Physical Sciences and Engineering, Life Sciences                 \\\hline
     5                & Web of Science     & 200 million records   & 1998          & Physical Sciences, Technology, Life Sciences \&Biomedicine       \\\hline
-    6                & LISTA              & 513 million records   & 2005          & Automation, Classification, Electronic resources and ERM systems \\\hline
-    7                & Frontiers          & 185 academic journals & 2007          & Education, Computer Science, Robotics and AI                     \\\hline
-    8                & Google Scholar     & 389 million records   & 2004          & Various topics                                                   \\\hline
+    6 $^{\ast}$      & LISTA              & 513 million records   & 2005          & Automation, Classification, Electronic resources and ERM systems \\\hline
+    7 $^{\ast}$      & Frontiers          & 185 academic journals & 2007          & Education, Computer Science, Robotics and AI                     \\\hline
+    8 $^{\ast}$      & Google Scholar     & 389 million records   & 2004          & Various topics                                                   \\\hline
+  \end{tabularx}
+  \begin{tabularx}{\textwidth}{@{}l}
+    \footnotesize{$^{\ast}$ Secondary sources}\\
   \end{tabularx}
 \end{table}
 
-Default language selection was English. Examples of search queries used with combination of search terms, filters on the selected
-resources:
-\begin{enumerate}
-  \item SpringerLink -- \textit{"telepresence OR robots OR cybersecurity OR education OR risks"};
-  \item IEEExplore -- \textit{"("All Metadata":telepresence) OR ("All Metadata":robots) OR ("All Metadata":cybersecurity) OR ("All Metadata"
-  :education) OR ("All Metadata":risks)"};
-  \item Scopus -- \textit{"TITLE-ABS-KEY ( telepresence OR robots OR cybersecurity OR education OR risks )  AND  ( LIMIT-TO ( PUBYEAR ,
-    2023 )  OR LIMIT-TO ( PUBYEAR ,  2022 )  OR LIMIT-TO ( PUBYEAR ,  2021 )  OR LIMIT-TO ( PUBYEAR ,  2020 )  OR LIMIT-TO ( PUBYEAR
-    ,  2019 ) )  AND  ( LIMIT-TO ( DOCTYPE ,  "ar" ) )  AND  ( LIMIT-TO ( SUBJAREA ,  "COMP" ) )"}.
-\end{enumerate}
+Search scope default language selection was English. Examples of search search string composition used with combination of search terms,
+filters on
+the
+selected resources can be seen in Table~\ref{tab:search_string}. The search string used all possible combinations. Preliminary
+searches showed
+that using main
+keywords yielded best results.
 
 \begin{table}[htb]
   \centering
   \smaller
-  \caption{Number of selected for review using primary search stategy}
-  \label{tab:query-results}
-  \begin{tabularx}{\textwidth}{|c|c|c|Y|Y|Y|Y|Y|}
-    \hline
-    \textbf{Publisher} & \textbf{Date} & \textbf{Range} & \textbf{Type} & \textbf{Discipline} & \textbf{Number of studies} \\\hline
-    SpringerLink       & 03.2023       & 2019-2023      & Article       & Engineering         & 57349                      \\\hline
-    IEEExplore         & 04.2023       & 2019-2023      & Journals      & Computer Science    & 61010                      \\\hline
-    Scopus             & 04.2023       & 2019-2023      & Article       & Computer Science    & 101267                     \\\hline
-    IEEExplore         & 04.2023       & 2019-2023      & All           & X                   & 221674                     \\\hline
-    SpringerLink       & 03.2023       & 2019-2023      & All           & X                   & 1649397                    \\\hline
-    Scopus             & 04.2023       & 2019-2023      & All           & X                   & 7865145                    \\\hline
+  \caption{Composition of search strings}
+  \label{tab:search_string}
+  \begin{tabularx}{300pt}{|c|X|}
+    \hline \textbf{\#} & \textbf{String} \\\hline
+    1 & telepresence AND cybersecurity OR risks AND assessment AND robots AND
+    education \\\hline
+    2 & tele-robotics AND cybersecurity AND risks AND robots OR education AND
+    assessment AND compromise OR mitigation \\\hline
+    2 & telepresence AND cybersecurity AND risks AND assessment AND robots AND
+    education AND management AND mitigation AND security AND compromise \\\hline
   \end{tabularx}
 \end{table}
 
-\ldots
+The databases used in this study contained scientific journals, conference proceedings, books, and trade journal articles. The sole
+limitation imposed was that the analyzed articles had to be in English. In April 2023, the database search was conducted, yielding a total
+of 655 publications. Some references were found in multiple databases. To eliminate duplicates, a unified list featuring the titles of
+the chosen publications was created. The abstracts of these publications were reviewed to confirm their relevance to \ac{tprs} and
+cybersecurity. After
+implementing this exclusion criterion, 10 publications were chosen for more in-depth analysis as seen in
+Table~\ref{tab:query_results}.
+
+\begin{table}[htb]
+  \centering
+  \small
+  \caption{Number of selected studies found primary search stategy}
+  \label{tab:query_results}
+  \begin{tabularx}{370pt}{|X|X|X|X|X|X|X|X|X|X|}
+    \hline
+    \colTwo{} & \colTwo{Journal} & \colTwo{\makecell[c]{Conference \\Paper}} & \colTwo{Book Chapter} & \colTwo{Whitepaper} \\\hline
+    \textbf{Year}          & \textbf{Total}              & \cent{T}        & \cent{S}          & \cent{T}        & \cent{S}          & \cent{T}        & \cent{T}          & \cent{S}          & \cent{T}          \\\hline
+    2014          &  14             & 6          &            & 6          &            & 2          &            &            &       \\\hline
+    2015          &  6              & 5          &            & 3          &            & 2          &            &            &         \\\hline
+    2016          &  3              & 5          &            &            &            & 1          &            &            &     \\\hline
+    2017          &  11             & 11         &            & 5          &            & 1          &            &            &      \\\hline
+    2018          &  14             & 19         &            & 3          &            & 6          &            &            &          \\\hline
+    2019          &  34             & 36         & 1          & 15         &            & 9          &            &            &    \\\hline
+    2020          &  50             & 60         & 1          & 16         &            & 20         &            &            &     \\\hline
+    2021          &  174            & 89         & 5          & 60         & 1          & 88         &            &            &      \\\hline
+    2022          &  252            & 89         & 2          & 95         &            & 131        &            &            &        \\\hline
+    2023          &  97             & 30         &            & 34         &            & 52         &            & 1          &       \\\hline
+  \end{tabularx}
+  \begin{tabularx}{370pt}{@{}l}
+    \footnotesize{$^{\ast}$ T - total, S - selected}\\
+  \end{tabularx}
+\end{table}
+
 
 \subsection{Selection of primary and secondary studies}\label{subsec:selection-of-studies}
 
@@ -164,45 +197,46 @@ studies was
 extended to include secondary studies that provide indirect evidence about the research question.
 
 In the context of assessing cybersecurity risks in telepresence robotics for higher education systems, the literature analysis process
-identified \# key findings that directly influence the assessment of cybersecurity risks in \ac{hei} or in other ways support the
+identified 7 key findings that directly influence the assessment of cybersecurity risks in \ac{hei} or in other ways support the
 answering of research questions. Among
 these studies, it was taken into account that secondary studies within the timerange of 2014\ldots2023 may have outdated information and
 as such their findings were noted and used as supportive information. Throughout the discussion of each study, the aspects related to
-cyber security risks in \ac{tprs} are highlighted. Table \# lists findings and the corresponding references:
+cyber security risks in \ac{tprs} are highlighted. Table~\ref{table:selected_sources} lists findings and the corresponding references:
 
 \begin{enumerate}
-  \item Identification of security risks associated with \ac{tprs}.
-  \item Analysis of existing risk assessment models and their limitations in addressing \ac{tprs}-specific security challenges.
-  \item Potential security vulnerabilities in \ac{tprs}, including hardware, software, and network-related issues.
-  \item Importance of \ac{tprs} in \ac{hei} and their.
-  \item Examination of studies that highlight \ac{tprs} security incidents and the effectiveness of implemented countermeasures.
-  \item Development of guidelines and recommendations for organizations to better understand and manage \ac{tprs} security risks.
-  \item Exploration of future research directions to enhance the security of \ac{tprs} in higher education and other settings.
-  \item Investigation of mitigation strategies and best practices to address identified weaknesses in \ac{tprs} security.
+  \item Identification of security risks associated with \ac{tprs}. %1 security risks
+  \item Analysis of existing risk assessment models and their limitations in addressing \ac{tprs}-specific security challenges. %2 risk models
+  \item Potential security vulnerabilities in robotics, including hardware, software, and network-related issues. %3 TRPs vulnerabilities
+  \item Usage of \ac{tprs} in \ac{hei}. %4 TRPS and EDU
+  \item Examination of studies that highlight \ac{tprs} security incidents and the effectiveness of implemented countermeasures. %5 countermeasures
+  \item Exploration of future research directions to enhance the security of \ac{tprs} in higher education and other settings. %6 future research
+  \item Investigation of mitigation strategies and best practices to address identified weaknesses in \ac{tprs} security. %7 mitigation strategies
 \end{enumerate}
 
-\begin{table}[h!]
+\begin{table}[h]
   \centering
-  \smaller
-  \caption{Selected primary and secondary studies}
-  \label{tab:studies}
-  \begin{tabularx}{\columnwidth}{lcll}
-    \toprule
-    \textbf{Outcome measures}                                                                       & \textbf{Year} & \textbf{Study design} & \textbf{Evidence Level} \\
-    \midrule
-    Perceived usefulness of \ac{tprs}~\cite[]{acceptance-telepresence-robots-2022}                  & 2022          & Quasi-random          & 4-3                     \\
-    Robotics cybersecurity and countermeasures~\cite[]{cyber_security_issues_in_robotics_2021}                                     & 2021          & Expert opinion        & 5                       \\
-    Vulnerabilities and security solutions in robotics domain~\cite[]{robotics_cyber_security_2022}                                  & 2022& Expert opinion& 5                       \\
-    Smart design engineering~\cite[]{smart_design_engineering_2020}                                 & 2020          & Expert opinion& 5                       \\
-    Methodology to protect robots~\cite[]{robot_security_review_2022}                               & 2022          & Expert opinion& 5                       \\
-    Perspectives of implementing \ac{tprs}~\cite[]{higher_edu_perception_on_tprs_2022}                                                         & 2022          & Quasi-random          & 4-3                     \\
-    Methodology to perform security assessments in robotics~\cite[]{robot_security_framework_2018}                                         & 2018          & Expert opinion& 5                       \\
-    Security measures in \ac{he}~\cite[]{role_of_cyber_security_in_higher_edu_2020}                 & 2020          & Expert opinion& 5                       \\
-    Telepresence services in the \ac{hei}~\cite[]{telepresence_robots_in_classroom_2019}                                                           & 2019          & Expert opinion& 5                       \\
-    \bottomrule
+  \small
+  \caption{Selected sources}
+  \label{table:selected_sources}
+  \begin{tabularx}{\textwidth}{|l|l|X|l|l|l|l|l|l|l|l|l|}
+    \hline
+    \textbf{\#} & \textbf{Evidence level} & \textbf{Year} & \textbf{References}                                              & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5}& \textbf{6}& \textbf{7}  \\\hline
+    1           & 5                       & 2021          & Lacava et al.~\cite[]{cyber_security_issues_in_robotics_2021}    & X          &            &            &            &            & X          &            \\\hline
+    2           & 5                       & 2022          & Yaacoub et al.~\cite[]{robotics_cyber_security_2022}             & X          & X          & X          &            & X          & X          & X          \\\hline
+    3           & 5                       & 2020          & Pessoa et al.~\cite[]{smart_design_engineering_2020}             &            &            &            &            & X          & X          &            \\\hline
+    4           & 5                       & 2021          & Zhu et al.~\cite[]{introduction_to_robot_system_security_2021}   & X          & X          &            &            & X          &           & X         \\\hline
+    5 $^{\ast}$ & 5                       & 2022          & Lei et al.~\cite[]{acceptance-telepresence-robots-2022}          &            &            &            & X          &            &            &            \\\hline
+    6 $^{\ast}$ & 5                       & 2022          & Mayoral-Vilches~\cite[]{robot_security_review_2022}              &            &            & X          &            & X          &            &            \\\hline
+    7 $^{\ast}$ & 5                       & 2022          & Leoste et al.~\cite[]{higher_edu_perception_on_tprs_2022}        &            &            &            & X         &            &            &               \\\hline
+    8 $^{\ast}$ & 5                       & 2018          & Vilches et al.~\cite[]{robot_security_framework_2018}            & X          &            &            &            &            &            &            \\\hline
+    9 $^{\ast}$ & 5                       & 2020          & Singar et al.~\cite[]{role_of_cyber_security_in_higher_edu_2020} &           &            &            & X         &            &            & X         \\\hline
+    10$^{\ast}$ & 5                       & 2019          & Reis et al.~\cite[]{telepresence_robots_in_classroom_2019}       &            &            &            & X         &            &            &               \\\hline
+  \end{tabularx}
+  \begin{tabularx}{\textwidth}{@{}l}
+    \footnotesize{$^{\ast}$ Secondary studies}\\
   \end{tabularx}
 \end{table}
 
 \subsection{Extracted data}\label{subsec:extracted-data}
 
-todo
+% content here
