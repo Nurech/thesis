@@ -240,5 +240,12 @@
 \usepackage{tabularray}
 \UseTblrLibrary{booktabs}
 
+\newcommand{\colOne}[1]{\multicolumn{1}{|>{\hsize=2\hsize}{X}|}{ \textbf{#1}}}
 \newcommand{\colTwo}[1]{\multicolumn{2}{|>{\hsize=2\hsize}{X}|}{ \textbf{#1}}}
-\newcommand{\cent}[1]{\makecell[c]{\textbf{#1}}}
+\newcommand{\colTwoEnd}[1]{\multicolumn{2}{>{\hsize=2\hsize}{X}|}{ \textbf{#1}}}
+\newcommand{\colThree}[1]{\multicolumn{3}{|>{\hsize=2\hsize}{X}|}{ \textbf{#1}}}
+\newcommand{\colThreeEnd}[1]{\multicolumn{3}{>{\hsize=2\hsize}{X}|}{ \textbf{#1}}}
+\newcommand{\centre}[1]{\makecell[c]{\textbf{#1}}}
+
+
+\usepackage{stmaryrd}
