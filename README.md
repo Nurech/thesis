@@ -7,6 +7,6 @@ root
   ├── out (PDF)
   ├── misc
   ├── * research methods (not in git)
-  ├── * papaers (not in git)
+  ├── * papers (not in git)
   └── .gitignore
 ```
