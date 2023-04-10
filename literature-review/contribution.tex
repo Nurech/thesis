@@ -84,11 +84,10 @@ Secondary studies were extended to other languages than English (incl. Estonian)
     \hline
     \colThree{Primary studies} & \colThreeEnd{Secondary studies$^{\ast}$ } \\\hline
     Date Range & Type & Discipline & Date Range & Type & Discipline \\\hline
-    \makecell[l]{2019\ldots2023} & \makecell[l]{Reports,\\ Journals,\\ Experiments,\\ Datasets} & \makecell[l]{Computer \\ Science,\\
-    Engineering} & \makecell[l]{2014\ldots2023} & \makecell[l]{Articles,\\ Conference \\ Proceedings,\\ Whitepapers} & \makecell[l]{
-      Social \\Sciences,\\Psychology} \\\hline
+    2019\ldots2023 & Reports, Journals, Experiments, Datasets & Computer Science, Engineering & 2014\ldots2023 & Articles, Conference
+    Proceedings, Whitepapers & Social Sciences, Psychology \\\hline
   \end{tabularx}
-  \begin{tabularx}{\textwidth}{l}
+  \begin{tabularx}{\textwidth}{X}
     \footnotesize{$^{\ast}$ Includes primary search terms}\\
   \end{tabularx}
 \end{table}
@@ -104,7 +103,15 @@ terms used and the number
 of results
 obtained from each
 resource was recorded for later use to check for updates on the subject. Most filtering refinements were done in \ac{ui}. To identify relevant research several databases were queried with the same search terms. Database selection was based
-on the main category of hosted works (technology), the number of publications published and the age of the portal. In the execution phase
+on the main category of hosted works (technology) as indicators show that most \ac{tprs} related materials originate from \ac{CS} field~\cite[62]{telepresence_perspective_psychology_educational_2022},
+the number
+of publications published
+and
+the
+age
+of
+the portal. In the
+execution phase
 main databases were (SpringerLink, IEEExplore, Scopus, ScienceDirect, Web of Science) due to their large number of publications and
 relvance on the topic. Initial queries yeilded small number of results, thus the search was extended to secondary sources (LISTA, Frontiers, Google Scholar).
 
@@ -125,7 +132,7 @@ relvance on the topic. Initial queries yeilded small number of results, thus the
     8 $^{\ast}$      & Google Scholar     & 2004          & Various topics                                             \\\hline
     9 $^{\ast}$      & Research Gate      & 2008          & Computer Sciences, Engineering, Social Sciences            \\\hline
   \end{tabularx}
-  \begin{tabularx}{\textwidth}{@{}l}
+  \begin{tabularx}{\textwidth}{X}
     \footnotesize{$^{\ast}$ Secondary sources}\\
   \end{tabularx}
 \end{table}
@@ -166,23 +173,23 @@ Table~\ref{tab:query_results}.
   \small
   \caption{Number of selected studies found and selected for analysis}
   \label{tab:query_results}
-  \begin{tabularx}{370pt}{|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|}
+  \begin{tabularx}{\textwidth}{|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y|}
     \hline
-    \colTwo{} & \colTwoEnd{Journal} & \colTwoEnd{\makecell[c]{Conference \\Paper}}   & \colTwoEnd{Book Chapter} & \colTwoEnd{Whitepaper} \\\hline
-    \textbf{Year}            & \textbf{Total}             & \centre{T}          & \centre{S}            & \centre{T}          & \centre{S}            & \centre{T}          & \centre{S}            & \centre{T}            & \centre{S}            \\\hline
-    2014            & 14             & 6          &            & 6          &            & 2          &            &            &            \\\hline
-    2015            & 10              & 5          &          & 3            &            & 2          &            &            &            \\\hline
-    2016            & 7             & 6         & 1          &          &            & 1          &            &            &            \\\hline
-    2017            & 18             & 12         & 2          & 5          &            & 1          &            &          &            \\\hline
-    2018            & 32             & 22         & 1          & 3         &            & 6          &            & 1            &            \\\hline
-    2019            & 63            & 39         & 1          & 15         &            & 9         &            &            &            \\\hline
-    2020            & 104            & 68        & 2          & 16         &          & 20         &            &            &            \\\hline
-    2021            & 270            & 122        & 3          & 60         & 1            & 88        &            &            &          \\\hline
-    2022            & 341            & 115         & 5            & 95         &            & 131         &            &          & 1            \\\hline
-    2023 & 141            & 54        &         & 34        &          & 52        &            & 1          &          \\\hline
-    \textbf{Total}: & 927            & 450        & 15         & 163        & 1          & 312        &            & 2          & 1          \\\hline
+    \colTwo{} & \colTwoEnd{Journal} & \colTwoEnd{Conference Papers} & \colTwoEnd{Book Chapter} & \colTwoEnd{Whitepaper} \\\hline
+    \textbf{Year}   & \textbf{Total} & \centre{T} & \centre{S} & \centre{T} & \centre{S} & \centre{T}          & \centre{S}            & \centre{T}            & \centre{S}            \\\hline
+    2014            & 14             & 6          &            & 6          &            & 2          &            &            &         \\\hline
+    2015            & 10             & 5          &            & 3          &            & 2          &            &            &         \\\hline
+    2016            & 7              & 6          & 1          &            &            & 1          &            &            &         \\\hline
+    2017            & 18             & 12         & 2          & 5          &            & 1          &            &            &         \\\hline
+    2018            & 32             & 22         & 1          & 3          &            & 6          &            & 1          &         \\\hline
+    2019            & 63             & 39         & 1          & 15         &            & 9          &            &            &         \\\hline
+    2020            & 104            & 68         & 2          & 16         &            & 20         &            &            &         \\\hline
+    2021            & 250            & 122        & 5          & 40         & 1          & 88         &            &            &         \\\hline
+    2022            & 306            & 116        & 5          & 59         &            & 131        &            &            & 1       \\\hline
+    2023            & 123            & 54         &            & 16         &            & 52         &            & 1          &         \\\hline
+    \textbf{Total}: & 927            & 450        & 17         & 163        & 1          & 312        &            & 2          & 1       \\\hline
   \end{tabularx}
-  \begin{tabularx}{370pt}{@{}l}
+  \begin{tabularx}{\textwidth}{X}
     \footnotesize{$^{\ast}$ T - total, S - selected}\\
   \end{tabularx}
 \end{table}
@@ -228,19 +235,22 @@ cyber security risks in \ac{tprs} are highlighted. Table~\ref{table:selected_sou
     4            & 2021          & Lacava et al.~\cite[]{cyber_security_issues_in_robotics_2021}               & X          &            &            &            &            & X          &            \\\hline
     5            & 2022          & Yaacoub et al.~\cite[]{robotics_cyber_security_2022}                        & X          & X          & X          &            & X          & X          & X          \\\hline
     6            & 2020          & Pessoa et al.~\cite[]{smart_design_engineering_2020}                        &            &            &            &            & X          & X          &            \\\hline
-    7 $^{\ast}$  & 2017          & Lera et al.~\cite[]{cyber_sec_robotics_privacy_safety_2017}                 & X          & X & X &  &  & X &  \\\hline
-    8 $^{\ast}$  & 2016          & Sabine et al.~\cite[]{if_robots_cause_harm_2016}                            &            &            & X          &            &            &            &            \\\hline
-    9 $^{\ast}$  & 2018          & Ahmad et al.~\cite[]{analyzing_cyber_physical_threats_2018}                 & X          & X & X & X &  &  & X \\\hline
-    10 $^{\ast}$ & 2017          & Portugal et al.~\cite[]{role_of_security_in_human_robot_2017}               & X &  & X &  &  &  &  \\\hline
-    11 $^{\ast}$ & 2022          & Lei et al.~\cite[]{acceptance_telepresence_robots_2022}                     & X          &            &            & X          &  &  &  \\\hline
-    12 $^{\ast}$ & 2022          & Leoste et al.~\cite[]{higher_edu_perception_on_tprs_2022}                   &            &            &            & X &  &  &  \\\hline
-    13 $^{\ast}$ & 2018          & Vilches et al.~\cite[]{robot_security_framework_2018}                       & X          & X          &            &            &            &            &            \\\hline
-    14 $^{\ast}$ & 2022          & Mayoral-Vilches~\cite[]{robot_security_review_2022}                         &            &            & X          &            & X          &            &            \\\hline
-    15 $^{\ast}$ & 2020          & Singar et al.~\cite[]{role_of_cyber_security_in_higher_edu_2020} &  &  &  & X &  &  & X \\\hline
-    16 $^{\ast}$ & 2019          & Reis et al.~\cite[]{telepresence_robots_in_classroom_2019}                  &            &            &            & X &  &  &  \\\hline
-    17 $^{\ast}$ & 2022          & Virkus et al.~\cite[]{telepresence_perspective_psychology_educational_2022} &  &  &  & X &  &  &  \\\hline
+    7            & 2021          & Villaronga et al.~\cite[]{cyber_sec_safety_robots_legal_2021}               & X          & X          &            &            &            &            & X          \\\hline
+    8 $^{\ast}$  & 2017          & Lera et al.~\cite[]{cyber_sec_robotics_privacy_safety_2017}                 & X          & X & X &  &  & X &  \\\hline
+    9 $^{\ast}$  & 2016          & Sabine et al.~\cite[]{if_robots_cause_harm_2016}                            &            &            & X          &            &            &            &            \\\hline
+    10 $^{\ast}$ & 2018          & Ahmad et al.~\cite[]{analyzing_cyber_physical_threats_2018}                 & X          & X & X & X &  &  & X \\\hline
+    11 $^{\ast}$ & 2017          & Portugal et al.~\cite[]{role_of_security_in_human_robot_2017}               & X &  & X &  &  &  &  \\\hline
+    12 $^{\ast}$ & 2022          & Lei et al.~\cite[]{acceptance_telepresence_robots_2022}                     & X          &            &            & X          &  &  &  \\\hline
+    13 $^{\ast}$ & 2022          & Leoste et al.~\cite[]{higher_edu_perception_on_tprs_2022}                   &            &            &            & X &  &  &  \\\hline
+    14 $^{\ast}$ & 2018          & Vilches et al.~\cite[]{robot_security_framework_2018}                       & X          & X          &            &            &            &            &            \\\hline
+    15 $^{\ast}$ & 2022          & Mayoral-Vilches~\cite[]{robot_security_review_2022}                         &            &            & X          &            & X          &            &            \\\hline
+    16 $^{\ast}$ & 2020          & Singar et al.~\cite[]{role_of_cyber_security_in_higher_edu_2020} &  &  &  & X &  &  & X \\\hline
+    17 $^{\ast}$ & 2019          & Reis et al.~\cite[]{telepresence_robots_in_classroom_2019}                  &            &            &            & X &  &  &  \\\hline
+    18 $^{\ast}$ & 2022          & Virkus et al.~\cite[]{telepresence_perspective_psychology_educational_2022} &  &  &  & X &  &  &  \\\hline
+    19 $^{\ast}$ & 2021          & Gupta et al.~\cite[]{humans_and_robots_relation_2021}                       &            &            &            & X          &            &            &            \\\hline
+
   \end{tabularx}
-  \begin{tabularx}{\textwidth}{@{}l}
+  \begin{tabularx}{\textwidth}{X}
     \footnotesize{$^{\ast}$ Secondary studies}\\
   \end{tabularx}
 \end{table}

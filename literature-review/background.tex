@@ -7,14 +7,22 @@
 \section{Background / State of the Art}
 
 The rapid growth of technology, multimedia, and robotics has led to significant advancements in \ac{ict} infrastructure worldwide, prompting
-the development of various educational programs. The evolution of technology has boosted the field of robotics, resulting in a wide array
-of potential applications in \ac{he}. The use of robotics in education is increasing,
+the development of various educational programs. The
+evolution
+of technology has boosted the field
+of robotics,
+resulting in a
+wide array
+of potential applications in \ac{he}. In recent events, COVID-19 has expedited the adoptation of robotic techonology, including \ac{tprs}
+into
+our lives~\cite[193]{humans_and_robots_relation_2021}. The use of robotics in education is increasing,
 with \ac{tprs} being applied in \ac{hei} and other diverse roles in the industry~\cite[]{telepresence_robots_in_classroom_2019,higher_edu_perception_on_tprs_2022}.
 
 \ac{tprs} have great potential for pedagogic reasons within education at all levels, as they benefit \ac{he} personnel the replacement of
 physical
 presence and allow students with \ac{sen} to have access to \ax{HE} they might miss otherwise due to their disabilities~\cite[546]{
-  telepresence_robots_in_classroom_2019}.
+  telepresence_robots_in_classroom_2019}. They can also provide a more engaging experience when normal cicumstances for interaction are not
+possible (COVID-19 restrictions)~\cite[197]{humans_and_robots_relation_2021}~\cite[1]{higher_edu_perception_on_tprs_2022}.
 \ac{tprs} have ability to create interaction between individuals which can be an opportunity for learning not only from a three-dimensional
 inanimate
 object but also through interaction with other people. This interaction enables \ac{tprs} to aid in improving social
@@ -46,7 +54,7 @@ cybersecurity risks within robotics systems in general, the studies which focus 
 
 Because of the lack of research on \ac{tprs} in \ac{hei} regarding cybersecurity risks and the usage of \ac{tprs}
 is increasing, this thesis aims to bridge the gap in the literature by providing a review of the state of the art of
-\ac{tprs} cybersecurity risks in \ac{hei}. We explore cyber-physical threats which could be apply to \ac{tprs}, and offers possible
+\ac{tprs} cybersecurity risks in \ac{hei}. We explore cyber-physical threats which could be apply to \ac{tprs}, and offer possible
 mitigation strategies for identified cybersecurity risks.
 
 \subsection{Related Work}
@@ -83,10 +91,27 @@ definition is compromised ~\cite[77-78]{cyber_sec_robotics_privacy_safety_2017}.
 \textbf{Physical threats}, even in smaller robotic systems, should still be considered a possibility. \ac{tprs} are not immune to the risks mentioned above. Like any electronic device, there is a possibility for malfunction, which can lead to the device being inoperable or even becoming dangerous (fire, explosion). In the event of an accident that results in damages
 It will raise legal questions regarding who is liable for the damages to property or injury to a person. It has been argumented that though
 the producer of the robot is responsible for the safety of the robot, and the operator is responsible for the safety of the environment in
-which robot operates~\cite[]{if_robots_cause_harm_2016}. In a less extreme scenario, the robot's unexpected inoperability can cause a loss
+which robot operates~\cite[]{if_robots_cause_harm_2016}. Little Red Riding Hood, while journeying through the forest to visit her
+grandmother, encountered a sly wolf, leading to a dangerous yet ultimately triumphant adventure. In a less extreme scenario, the robot's
+unexpected inoperability can cause a loss
 of confidence in the system or deprive the user of the benefits of the system as users vary of failures of robots~\cite[9-10]{
-  higher_edu_perception_on_tprs_2022}. In that sense, physical threats by the robotic systems to human users are not limited to
-direct contact with the robot and the environment, which can affect the user's safety.
+  higher_edu_perception_on_tprs_2022}. Physical threats by the robotic systems to human users are not limited to just
+direct contact. Robotic system could alter the environment, which can affect the user's safety.
+
+The levels of physical attacks are categorized as destruction, partial damage, degradation, disruption, or substitution. These threats are
+further
+differentiated according to the type of user, namely domestic/personal, commercial/business, and public administration~\cite[80]{cyber_sec_robotics_privacy_safety_2017}.
+Despite the significance of physical threats, privacy risks often emerge as the most relevant concern for service robot users. Though the
+physical damage caused by service robots may be limited due to their size, information leaks can lead to severe consequences~\cite[83]{
+  cyber_sec_robotics_privacy_safety_2017}. Physical threats can also be linked to psychological harm~\cite[5]{cyber_sec_safety_robots_legal_2021}.
+
+Robotic system psychological risks refer to the potential adverse effects on users' mental well-being that may arise from interacting
+with robotic systems. These risks can occur when a robot's behavior is modified or malfunctions, and users may not notice these
+changes
+or misinterpret them as normal behavior. Furthermore, cybersecurity attacks on robotic systems can also impact their task performance and
+endanger users' safety without being apparent to the user, further contributing to psychological risks ~\cite[5]{
+  cyber_sec_safety_robots_legal_2021}. This area might become even more relevant in the future as some researchers are investigating
+possibilities to create more meaningful interactions and emotional connections between humans and robots~\cite[186]{smart_design_engineering_2020}.
 
 \textbf{Cyber threats} to \ac{hei} according to Verizon 2022 Data Breach Investigation Report (DBIR), are external (75\%) threat actors
 who leverage system intrusion and web application attacks
@@ -112,6 +137,21 @@ their privacy noting that privacy and control methods are the
 most important when building trust towards \ac{tprs}~\cite[59]{telepresence_perspective_psychology_educational_2022}.
 This is a reasonable concern because technological data security does not guarantee privacy. How can the user identify if the robotic
 system is recording or transmitting data without consent? Technological failures in the user's inability to identify when it is being recorded is not a new phenomenon~\cite[]{is_my_phone_listening_2019}.
+
+Robotic systems can be attacked through the network, the robot's software, or the robot's hardware. They are prone to vulnerabilities in
+robotic
+systems'
+communications and the potential attacks could impact security services such as authentication, confidentiality, and
+integrity. These attacks range from jamming and de-authentication attacks, which disrupt communication and control, to traffic analysis
+and eavesdropping attacks that compromise privacy and confidentiality. Other attacks, such as false data injection, denial of service,
+and man-in-the-middle attacks, target the availability, integrity, and authentication of robotic systems~\cite[126-128]{
+  robotics_cyber_security_2022}. It is crucial to protect robots from potential attacks by employing robust authentication processes,
+lightweight cryptographic algorithms, privacy-preserving techniques, and non-cryptographic solutions~\cite[147-149]{
+  robotics_cyber_security_2022}. To protect the robot from being compromised it is suggested to apply privacy by design principles in the
+development phase of the robotic system ~\cite[]{smart_design_engineering_2020,role_of_security_in_human_robot_2017, robotics_cyber_security_2022}.
+
+But not only are robotic systems vulnerable, users can become vulnerable though the robotic system. For example, \ac{ROS} can be manipulated to overtake the system and control the robot in a physical way or to manipulate its sensors/data~\cite[]{role_of_security_in_human_robot_2017}.
+
 
 \textbf{Cyber-physical} threats are a combination of both physical and cyber threats.
 Critical differences between TPRs and other robotics are how users can interact with the robot, and through the robotic system,
