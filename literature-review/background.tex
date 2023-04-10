@@ -13,23 +13,23 @@ of technology has boosted the field
 of robotics,
 resulting in a
 wide array
-of potential applications in \ac{he}. In recent events, COVID-19 has expedited the adoptation of robotic techonology, including \ac{tprs}
+of potential applications in \ac{he}. In recent events, COVID-19 has expedited the adoptation of robotic techonology, including \ac{TPR}
 into
 our lives~\cite[193]{humans_and_robots_relation_2021}. The use of robotics in education is increasing,
-with \ac{tprs} being applied in \ac{hei} and other diverse roles in the industry~\cite[]{telepresence_robots_in_classroom_2019,higher_edu_perception_on_tprs_2022}.
+with \ac{TPR} being applied in \ac{hei} and other diverse roles in the industry~\cite[]{telepresence_robots_in_classroom_2019,higher_edu_perception_on_tprs_2022}.
 
-\ac{tprs} have great potential for pedagogic reasons within education at all levels, as they benefit \ac{he} personnel the replacement of
+\ac{TPR} have great potential for pedagogic reasons within education at all levels, as they benefit \ac{he} personnel the replacement of
 physical
 presence and allow students with \ac{sen} to have access to \ax{HE} they might miss otherwise due to their disabilities~\cite[546]{
   telepresence_robots_in_classroom_2019}. They can also provide a more engaging experience when normal cicumstances for interaction are not
 possible (COVID-19 restrictions)~\cite[197]{humans_and_robots_relation_2021}~\cite[1]{higher_edu_perception_on_tprs_2022}.
-\ac{tprs} have ability to create interaction between individuals which can be an opportunity for learning not only from a three-dimensional
+\ac{TPR} have ability to create interaction between individuals which can be an opportunity for learning not only from a three-dimensional
 inanimate
-object but also through interaction with other people. This interaction enables \ac{tprs} to aid in improving social
+object but also through interaction with other people. This interaction enables \ac{TPR} to aid in improving social
 skills in individuals with disabilities~\cite[541]{telepresence_robots_in_classroom_2019}.
 
-Although the advantages of \ac{tprs} in education are numerous, this technology also creates new possible security risks that need to be
-assessed. Interconnectivity with \ac{tprs} by the internet to the \ac{hei} means that the organization needs to be aware of possible
+Although the advantages of \ac{TPR} in education are numerous, this technology also creates new possible security risks that need to be
+assessed. Interconnectivity with \ac{TPR} by the internet to the \ac{hei} means that the organization needs to be aware of possible
 security risks~\cite[120]{robotics_cyber_security_2022}. Cyber-physical threats could extend the range of known attack vectors by
 utilizing robotic capabilities and creating new attack surfaces not considered before~\cite[18-19]{analyzing_cyber_physical_threats_2018}.
 Cybersecurity
@@ -48,13 +48,13 @@ vulnerabilities in reasonable time periods. The lack of investment in cybersecur
 immature state of the field in robotics cybersecurity contribute
 to the challenges in securing robotic systems.
 Most current robots are vulnerable, and defensive approaches are struggling
-to keep up with the need for security~\cite[12]{robot_security_review_2022}. Therefore it is reasonable to assume that \ac{tprs} are also
+to keep up with the need for security~\cite[12]{robot_security_review_2022}. Therefore it is reasonable to assume that \ac{TPR} are also
 vulnerable to similar security risks. Though there exists various risk assessment models, frameworks, and methodologies to assess
-cybersecurity risks within robotics systems in general, the studies which focus on \ac{tprs} usage in \ac{hei} are limited and scattered.
+cybersecurity risks within robotics systems in general, the studies which focus on \ac{TPR} usage in \ac{hei} are limited and scattered.
 
-Because of the lack of research on \ac{tprs} in \ac{hei} regarding cybersecurity risks and the usage of \ac{tprs}
+Because of the lack of research on \ac{TPR} in \ac{hei} regarding cybersecurity risks and the usage of \ac{TPR}
 is increasing, this thesis aims to bridge the gap in the literature by providing a review of the state of the art of
-\ac{tprs} cybersecurity risks in \ac{hei}. We explore cyber-physical threats which could be apply to \ac{tprs}, and offer possible
+\ac{TPR} cybersecurity risks in \ac{hei}. We explore cyber-physical threats which could be apply to \ac{TPR}, and offer possible
 mitigation strategies for identified cybersecurity risks.
 
 \subsection{Related Work}
@@ -77,18 +77,21 @@ application security~\cite[5]{robot_security_framework_2018}. Yaacoub et al. ana
 ández and
 Matellán~\cite[
   76]{cyber_sec_robotics_privacy_safety_2017} propose a model that
-integrates \ac{OWASP} risk identification and various cyber-physical security aspects, considering the sources, targets, and potential consequences of robotic functionality. Mayoral-Vilches found that manufacturers lack the interest to invest in robotic systems security or that the systems' complexity exposes possible weaknesses~\cite[]{robot_security_review_2022}. The overall goal of these works is to provide insight for assessing security risks in robotics, and they overlap in most areas with somewhat consensus. However, there seems to be a lack of a common methodology for categorizing security risks in robotics. Though we do not have a clear consensus on how to characterize security risks, the methodologies presented can utilized to examine \ac{tprs} security concerns as they operate in the
+integrates \ac{OWASP} risk identification and various cyber-physical security aspects, considering the sources, targets, and potential consequences of robotic functionality. Mayoral-Vilches found that manufacturers lack the interest to invest in robotic systems security or that the systems' complexity exposes possible weaknesses~\cite[]{robot_security_review_2022}. The overall goal of these works is to provide insight for assessing security risks in robotics, and they overlap in most areas with somewhat consensus. However, there seems to be a lack of a common methodology for categorizing security risks in robotics. Though we do not have a clear consensus on how to characterize security risks, the methodologies presented can utilized to examine \ac{TPR} security concerns as they operate in the
 same domain of service robotics.
 
 To generalize, there exists three domains of risk in robotics:
-physical, cyber and cyber-physical.
-Physical risks include threats that affect the robot's operation mode, such as destruction, partial damage, disruption, degradation, or unexpected behavior. These threats can arise from natural disasters, accidents, or attacks. Cyber risks are threats that impact the robot's information, such as data gathered, stored, or transmitted. They can be related to issues in the robot's software, third-party libraries, or general vulnerabilities in the software components. Software flaws, security configuration issues, or software feature misuse can cause these risks.
+physical, cyber and cyber-physical~\cite[]{cyber_sec_robotics_privacy_safety_2017}.
+Physical risks include threats that affect the robot's operation mode, such as destruction, partial damage, disruption, degradation, or
+unexpected behavior~\cite[77]{cyber_sec_robotics_privacy_safety_2017}. These threats can arise from natural disasters, accidents, or
+attacks. Cyber risks are threats that impact the robot's information, such as data gathered, stored, or transmitted~\cite[78]{
+  cyber_sec_robotics_privacy_safety_2017}. They can be related to issues in the robot's software, third-party libraries, or general vulnerabilities in the software components. Software flaws, security configuration issues, or software feature misuse can cause these risks.
 Cyber-physical risks combine both physical and cyber threats. These threats can compromise sensors or actuators by substituting or
 modifying hardware or firmware, adding new hidden functionality.
 The impact of these threats is unexpected as the original functional
 definition is compromised ~\cite[77-78]{cyber_sec_robotics_privacy_safety_2017}. These risks can affect various actors involved in deploying robotic systems, such as final users, business users, robot vendors, and independent software developers.
 
-\textbf{Physical threats}, even in smaller robotic systems, should still be considered a possibility. \ac{tprs} are not immune to the risks mentioned above. Like any electronic device, there is a possibility for malfunction, which can lead to the device being inoperable or even becoming dangerous (fire, explosion). In the event of an accident that results in damages
+\textbf{Physical threats}, even in smaller robotic systems, should still be considered a possibility. \ac{TPR} are not immune to the risks mentioned above. Like any electronic device, there is a possibility for malfunction, which can lead to the device being inoperable or even becoming dangerous (fire, explosion). In the event of an accident that results in damages
 It will raise legal questions regarding who is liable for the damages to property or injury to a person. It has been argumented that though
 the producer of the robot is responsible for the safety of the robot, and the operator is responsible for the safety of the environment in
 which robot operates~\cite[]{if_robots_cause_harm_2016}.
@@ -117,12 +120,12 @@ possibilities to create more meaningful interactions and emotional connections b
 \textbf{Cyber threats} to \ac{hei} according to Verizon 2022 Data Breach Investigation Report (DBIR), are external (75\%) threat actors
 who leverage system intrusion and web application attacks
 (80\%) to penetrate a system and target personal data (63\%) or credentials (41\%)~\cite[57]{dbir_2022}. Latest reports, however, have not
-indicated specifically that cyber threats through \ac{tprs} are a threat to \ac{hei} in particular. Though, we do not
+indicated specifically that cyber threats through \ac{TPR} are a threat to \ac{hei} in particular. Though, we do not
 have such recorded cases analyzed in academic literature, the theoretical possibility of such an attack is not far-fetched, as we
 know that robotic systems have limitations. Cyber threats imply that the robotic system can be the source of threats, and the robot's software is vulnerable to attacks. Robotic systems face numerous threats that target their security, classified into various categories such as wireless jamming,
 reconnaissance and scanning, information disclosure, abuse of privilege, information gathering, information interception, information
 modification, physical damage, service disruption or denial, sabotage and espionage, and tracking and monitoring~\cite[122]{robotics_cyber_security_2022}. These threats also
-compromise the CIA triad—Confidentiality, Integrity, and Availability—of traditional and advanced \ac{ICSs}, as
+compromise the CIA triad—Confidentiality, Integrity, and Availability—of traditional and advanced \ac{ICS}, as
 well as the \ac{CC} domain associated with the robotic field~\cite[116]{robotics_cyber_security_2022}. It is crucial to address these threats to ensure the protection, privacy, and proper functioning of robotic systems.
 
 When discussing cyber threats, we must consider whether privacy is part of that security. A classification of privacy risks
@@ -131,11 +134,11 @@ disclosure of personal activities. Exteroceptive sensors, particularly cameras, 
 while the range and proprioceptive sensors are less critical. Furthermore, processing sensor data ``in the cloud`` introduces
 additional risks in communication and data storage, necessitating careful consideration of legal and ethical implications~\cite[82-84]{cyber_sec_robotics_privacy_safety_2017}.
 
-Privacy is a fundamental human right and a key component of \ac{hei}. Modern \ac{tprs} Double 2 provides privacy features such as end-to
+Privacy is a fundamental human right and a key component of \ac{hei}. Modern \ac{TPR} Double 2 provides privacy features such as end-to
 -end 128-bit AES Encryption
-~\cite[544]{telepresence_robots_in_classroom_2019}. However, users of \ac{tprs} and students around such devices are still concerned for
+~\cite[544]{telepresence_robots_in_classroom_2019}. However, users of \ac{TPR} and students around such devices are still concerned for
 their privacy noting that privacy and control methods are the
-most important when building trust towards \ac{tprs}~\cite[59]{telepresence_perspective_psychology_educational_2022}.
+most important when building trust towards \ac{TPR}~\cite[59]{telepresence_perspective_psychology_educational_2022}.
 This is a reasonable concern because technological data security does not guarantee privacy. How can the user identify if the robotic
 system is recording or transmitting data without consent? Technological failures in the user's inability to identify when it is being recorded is not a new phenomenon~\cite[]{is_my_phone_listening_2019}.
 
@@ -144,7 +147,7 @@ robotic
 systems'
 communications and the potential attacks could impact security services such as authentication, confidentiality, and
 integrity. These attacks range from jamming and de-authentication attacks, which disrupt communication and control, to traffic analysis
-and eavesdropping attacks that compromise privacy and confidentiality. Other attacks, such as false data injection, denial of service,
+and eavesdropping attacks that compromise privacy and confidentiality~\cite[122]{robotics_cyber_security_2022}. Other attacks, such as false data injection, denial of service,
 and man-in-the-middle attacks, target the availability, integrity, and authentication of robotic systems~\cite[126-128]{
   robotics_cyber_security_2022}. It is crucial to protect robots from potential attacks by employing robust authentication processes,
 lightweight cryptographic algorithms, privacy-preserving techniques, and non-cryptographic solutions~\cite[147-149]{
@@ -165,35 +168,20 @@ Extending the definition of cyber-physical threats, when the terminology is used
 the direct physical threat from the machine to the user. Such is the first human death caused by a robot in 1979~\cite[2]{robot_security_framework_2018}.
 That example could be considered as a direct (cyber)physical threat. ``cyber`` refers to the fact that one of the parties involved in the
 accident was a robot and the ``physical`` part to the fact that
-direct physical contact between the robot and the human was made. In the context of cyber-physical threats regarding \ac{tprs}, we should also examine this domain in
-the realm of a robot having access to sensitive information through its systems(audio and video
-capabilities) but also physical access to the environment and the ability to manipulate it (movement, touch)~\cite[982]{role_of_security_in_human_robot_2017}~\cite[250]{
+direct physical contact between the robot and the human was made. In the context of cyber-physical threats regarding \ac{TPR}, we should also examine this domain in
+the realm of a robot having access to sensitive information through its systems (audio and video
+capabilities), but also physical access to the environment and the ability to manipulate it (movement, touch)~\cite[982]{
+  role_of_security_in_human_robot_2017}~\cite[250]{
   role_of_cyber_security_in_higher_edu_2020}~\cite[11]{analyzing_cyber_physical_threats_2018}.
 Though the context is different (robot~$\shortrightarrow$~human vs. robot~$\shortrightarrow$~environment~$\shortrightarrow$~human), and sense of
 danger might not be as imminent, cyber-physical threats
 still
-exists in \ac{tprs}
+exists in \ac{TPR}
 and
 needs to
 be addressed~\cite[2]{cyber_sec_safet_robots_legal_2021}.
 
-In that sense, cyber-physical threats could be interpreted as a combination of
-three different sub-categories of risks:
 
-\begin{enumerate}
-  \item{Cyber-physical (P -- physical) threats are direct physical threats from the robot to the user.}
-  \item{Cyber-physical (E -- environment) threats in which the robot can access the environment and manipulate it.}
-  \item{Cyber-physical (C -- cyber) threats in which the robot capabilities are used to extend the known cyber attack surface.}
-\end{enumerate}
-
-In order to introduce new terminology, we will use the following notation to refer to the three sub-categories of cyber-physical threats
-: P -- physical, E -- environment, C -- cyber. To address these possible cyber-physical (PEC) risks within \ac{tprs}, we
-propose a systematic methodology to investigate the existence and importance of such risks. By conducting a case study, we will be able to
-verify the existence of such risks and interview experts to determine the importance of the risks and gain insight into the possible
-mitigation strategies. We argue that cyber-physical(PEC) risks in \ac{tprs} should be acknowledged as a significant concern in
-the field and raise awareness of such threats within the \ac{tprs} systems. By proposing new terminology with
-mitigation strategies and a systematic methodology to investigate the existence and importance of such risks, we hope to contribute to the
-field of \ac{tprs} security and privacy within the \ac{hei} and for organizations utilizing \ac{tprs} in general.
 
 \subsection{Telepresence Robotics}
 
@@ -207,7 +195,7 @@ field of \ac{tprs} security and privacy within the \ac{hei} and for organization
 
 % Your content here
 
-\subsection{Cyber Security Risks in \ac{tprs}}
+\subsection{Cyber Security Risks in \ac{TPR}}
 
 % Your content here
 
