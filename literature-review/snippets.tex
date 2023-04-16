@@ -1,3 +1,5 @@
+%! Author = partsjoo
+%! Date = 16.04.2023
 
 
 % this stuff is not used, just place to paste things
@@ -138,7 +140,7 @@ Methodology to protect robots~\cite[]{robot_security_review_2022}               
 Perspectives of implementing \ac{TPR}~\cite[]{higher_edu_perception_on_tprs_2022}                                                         & 2022          & Quasi-random          & 4-3                     \\
 Methodology to perform security assessments in robotics~\cite[]{robot_security_framework_2018}                                         & 2018          & Expert opinion& 5                       \\
 Security measures in \ac{he}~\cite[]{role_of_cyber_security_in_higher_edu_2020}                 & 2020          & Expert opinion& 5                       \\
-Telepresence services in the \ac{hei}~\cite[]{telepresence_robots_in_classroom_2019}                                                           & 2019          & Expert opinion& 5                       \\
+Telepresence services in the \ac{HEI}~\cite[]{telepresence_robots_in_classroom_2019}                                                           & 2019          & Expert opinion& 5                       \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -237,4 +239,27 @@ verify the existence of such risks and interview experts to determine the import
 mitigation strategies. We argue that cyber-physical(PEC) risks in \ac{TPR} should be acknowledged as a significant concern in
 the field and raise awareness of such threats within the \ac{TPR} systems. By proposing new terminology with
 mitigation strategies and a systematic methodology to investigate the existence and importance of such risks, we hope to contribute to the
-field of \ac{TPR} security and privacy within the \ac{hei} and for organizations utilizing \ac{TPR} in general.
+field of \ac{TPR} security and privacy within the \ac{HEI} and for organizations utilizing \ac{TPR} in general.
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[
+box/.style={rectangle, draw, text width=2.5cm, align=center},
+arrow/.style={->, thick, >=stealth},
+node distance=0.75cm and 1.5cm
+]
+
+\node[box] (box1) {1. Build theoretical framework.\\ Identify risk.};
+\node[box, right=of box1] (box2) {2. Validate risks using case studies.};
+\node[box, right=of box2] (box3) {3. Conduct interviews.\\ Experts confirm risks and provide mitigation strategies.};
+\node[box, right=of box3] (box4) {4. Risk analysis};
+
+\draw[arrow] (box1) -- (box2);
+\draw[arrow] (box2) -- (box3);
+\draw[arrow] (box3) -- (box4);
+\draw[arrow] (box4) -- ++ (0,-2.5) -| (box1.south) |- ([yshift=-0.3cm]box1.south) -- (box1);
+
+\end{tikzpicture}
+\caption{The initial plan for Master Project.}
+\label{fig:flowdiagram}
+\end{figure}

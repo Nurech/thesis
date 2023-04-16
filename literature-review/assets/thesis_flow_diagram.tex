@@ -1,0 +1,27 @@
+%! Author = partsjoo
+%! Date = 16.04.2023
+
+\begin{figure}
+  \centering
+  \begin{tikzpicture}[scale=0.8,
+  box/.style={rectangle, draw, fill=gray!20, text width=2.3cm, minimum height=1.3cm, align=center},
+  arrow/.style={->, thick, >=stealth},
+  node distance=0.2cm and 0.3cm
+  ]
+
+  \node[box] (box1) {1. Build theoretical background. Identify potential risks.};
+  \node[box, right=of box1] (box2) {2. Validate risks using case studies, gain deeper insight.};
+  \node[box, right=of box2] (box3) {3. Conduct interviews. Experts confirm risks and provide mitigation strategies.};
+  \node[box, right=of box3] (box4) {4. Risk and data analysis};
+  \node[box, right=of box4] (box5) {5. Conclusion, key findings, future research};
+
+  \draw[arrow] (box1) -- (box2);
+  \draw[arrow] (box2) -- (box3);
+  \draw[arrow] (box3) -- (box4);
+  \draw[arrow] (box4) -- (box5);
+  \draw[arrow] (box5) -- ++ (0,-2.7) -| (box1.south);
+
+  \end{tikzpicture}
+  \caption{The initial plan for Master Project.}
+  \label{fig:flowdiagram}
+\end{figure}
