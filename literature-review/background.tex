@@ -39,7 +39,7 @@ skills in individuals with disabilities~\cite[541]{telepresence_robots_in_classr
 
 Although the advantages of \ac{TPR} in education are numerous, this technology also creates new possible security risks that need to be
 assessed. Interconnectivity with \ac{TPR} by the internet to the \ac{HEI} means that the organization needs to be aware of possible
-security risks~\cite[120]{robotics_cyber_security_2022}. Cyber-physical threats could extend the range of known attack vectors by
+security risks~\cite[120]{robotics_cyber_security_2022}. \ac{CPS} threats could extend the range of known attack vectors by
 utilizing robotic capabilities and creating new attack surfaces not considered before~\cite[18-19]{analyzing_cyber_physical_threats_2018}.
 Cybersecurity
 is crucial in \ac{HEI} due
@@ -63,15 +63,17 @@ cybersecurity risks within robotics systems in general, the studies which focus 
 
 Because of the lack of research on \ac{TPR} in \ac{HEI} regarding cybersecurity risks and the usage of \ac{TPR}
 is increasing, this thesis aims to bridge the gap in the literature by providing a review of the state of the art of
-\ac{TPR} cybersecurity risks in \ac{HEI}. We explore cyber-physical threats which could be apply to \ac{TPR}, and offer possible
+\ac{TPR} cybersecurity risks in \ac{HEI}. We explore \aclc{CPS} threats which could be apply to \ac{TPR}, and offer possible
 mitigation strategies for identified cybersecurity risks.
 
 \subsection{Related Work}
 The growing prevalence of robots in various domains, including homes, industries, and professional facilities, has led some to
-consider robotics the next technological revolution. The first recorded human death caused by a cyber-physical system
+consider robotics the next technological revolution.  The first recorded human death caused by a \aclc{CPS}
 dates back to 1979~\cite[2]{robot_security_review_2022}. Even though much time has passed since then, evidence suggests that robotics security is being underestimated
 ~\cite[1-2]{
   robot_security_framework_2018}.
+
+One key area where \aclc{CPS} are increasingly deployed is robotics. Robots, by their very nature, combine physical and computational components, and are subject to both software-related and hardware-focused rules~\cite[6]{cyber_sec_safety_robots_legal_2021}. This unique combination of elements in robots creates new security risks that differ from traditional cybersecurity threats~\cite[3]{cyber_security_issues_in_robotics_2021}.
 
 Over the past decade, security and cybersecurity have significantly expanded, drawing individuals to various sub-areas within security
 assessment. Recent technical reports indicate that most security researchers assess vulnerabilities in
@@ -86,7 +88,7 @@ application security~\cite[5]{robot_security_framework_2018}. Yaacoub et al. ana
 ández and
 Matellán~\cite[
   76]{cyber_sec_robotics_privacy_safety_2017} propose a model that
-integrates \ac{OWASP} risk identification and various cyber-physical security aspects, considering the sources, targets, and potential
+integrates \ac{OWASP} risk identification and various \aclc{CPS} security aspects, considering the sources, targets, and potential
 consequences of robotic functionality. Mayoral-Vilches found that manufacturers lack the interest to invest in robotic systems security
 or that the systems' complexity exposes possible weaknesses~\cite[]{robot_security_review_2022}. The overall goal of these works is to
 provide insight for assessing security risks in robotics, and they overlap in most areas with somewhat consensus. However, there seems to be a lack of a common methodology for categorizing security risks in robotics. Though we do not have a clear consensus on how to characterize security risks, the methodologies presented can be utilized to examine \ac{TPR} security concerns as they operate in the
@@ -98,7 +100,7 @@ Physical risks include threats that affect the robot's operation mode, such as d
 unexpected behavior~\cite[77]{cyber_sec_robotics_privacy_safety_2017}. These threats can arise from natural disasters, accidents, or
 attacks. Cyber risks are threats that impact the robot's information, such as data gathered, stored, or transmitted~\cite[78]{
   cyber_sec_robotics_privacy_safety_2017}. They can be related to issues in the robot's software, third-party libraries, or general vulnerabilities in the software components. Software flaws, security configuration issues, or software feature misuse can cause these risks.
-Cyber-physical risks combine both physical and cyber threats. These threats can compromise sensors or actuators by substituting or
+\ac{CPS} risks combine both physical and cyber threats. These threats can compromise sensors or actuators by substituting or
 modifying hardware or firmware, adding new hidden functionality.
 The impact of these threats is unexpected as the original functional
 definition is compromised ~\cite[77-78]{cyber_sec_robotics_privacy_safety_2017}. These risks can affect various actors involved in deploying robotic systems, such as final users, business users, robot vendors, and independent software developers.
@@ -170,17 +172,21 @@ But not only are robotic systems vulnerable, users can become vulnerable though 
 
 
 \textbf{Cyber-physical} threats are a combination of both physical and cyber threats.
+\ac{CPS} have become increasingly prevalent in recent years, driven by the merging of the real and virtual worlds through technologies such as
+the \ac{IoT}~\cite[250]{role_of_cyber_security_in_higher_edu_2020}. These systems combine physical and computational components, often
+interacting with the environment through sensors and actuators~\cite[250]{role_of_cyber_security_in_higher_edu_2020}.
+Examples of \aclc{CPS} include electronics and telecommunication systems, navigation and automotive assistance systems, and health and medical systems~\cite[250]{role_of_cyber_security_in_higher_edu_2020}.
 Critical differences between TPRs and other robotics are how users can interact with the robot, and through the robotic system,
 they can interact with the environment. Previously established cyber attack
 vectors within the robotics system could now be exploited in ways that have not been considered before, creating a new dimension of
-cyber-physical threats, which are not limited to just cyber or physical threats. This creates the need to analyze this new domain of
-possible attack vectors and ultimately enhance existing knowledge of cyber-physical security.
+\aclc{CPS} threats, which are not limited to just cyber or physical threats. This creates the need to analyze this new domain of
+possible attack vectors and ultimately enhance existing knowledge of \aclc{CPS} security.
 
-Extending the definition of cyber-physical threats, when the terminology is used in the context of robotic systems, it usually refers to
+Extending the definition of \aclc{CPS} threats, when the terminology is used in the context of robotic systems, it usually refers to
 the direct physical threat from the machine to the user. Such is the first human death caused by a robot in 1979~\cite[2]{robot_security_framework_2018}.
 That example could be considered as a direct (cyber)physical threat. ``cyber`` refers to the fact that one of the parties involved in the
 accident was a robot and the ``physical`` part to the fact that
-direct physical contact between the robot and the human was made. In the context of cyber-physical threats regarding \ac{TPR}, we should also examine this domain in
+direct physical contact between the robot and the human was made. In the context of \aclc{CPS} threats regarding \ac{TPR}, we should also examine this domain in
 the realm of a robot having access to sensitive information through its systems (audio and video
 capabilities), but also physical access to the environment and the ability to manipulate it (movement, touch)~\cite[982]{
   role_of_security_in_human_robot_2017}~\cite[250]{
@@ -193,7 +199,11 @@ and
 needs to
 be addressed~\cite[2]{cyber_sec_safet_robots_legal_2021}.
 
+The security risks associated with \aclc{CPS} can arise from various factors, such as the lack of updates for robotic operating systems,
+firmware
+, and software, potentially resulting in cyber-physical attacks~\cite[120]{robotics_cyber_security_2022}. Furthermore, \aclc{CPS} threats can occur when a sensor or an actuator is compromised, either through hardware substitution or modification, or firmware tampering~\cite[78]{cyber_sec_robotics_privacy_safety_2017}. The consequences of such attacks can be unexpected and severe, as they compromise the original functional definition of the system~\cite[78]{cyber_sec_robotics_privacy_safety_2017}.
 
+As our reliance on \aclc{CPS}, including robots, continues to grow, ensuring their privacy, integrity, and security becomes a major concern~\cite[17]{robot_security_framework_2018}. Addressing these concerns requires a deep understanding of the discipline's landscape and vast cross-disciplinary approaches to provide an integrated security assessment for robotics~\cite[17]{robot_security_framework_2018}. This new and important field demands attention from researchers and practitioners alike to protect the various actors involved in the deployment of robotic systems~\cite[78]{cyber_sec_robotics_privacy_safety_2017}.
 
 \subsection{Telepresence Robotics}
 
