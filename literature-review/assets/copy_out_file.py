@@ -21,6 +21,6 @@ if __name__ == "__main__":
     source_file = "../../out/main.pdf"
     dest_folder = ""
     dest_file_prefix = datetime.now().strftime("%d%b%y").upper()
-    dest_file_suffix = "literature_draft_parts"
+    dest_file_suffix = "literature_parts"
 
     copy_pdf(source_file, dest_folder, dest_file_prefix, dest_file_suffix)
